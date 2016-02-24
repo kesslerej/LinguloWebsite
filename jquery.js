@@ -12,9 +12,9 @@
  * Date: 2016-01-08T19:56Z
  */
 
-(function (global, factory) {
+(function( global, factory ) {
 
-	if  (typeof module === "object" && typeof module.exports === "object") {
+	if ( typeof module === "object" && typeof module.exports === "object" ) {
 		// For CommonJS and CommonJS-like environments where a proper `window`
 		// is present, execute the factory and get jQuery.
 		// For environments that do not have a `window` with a `document`
@@ -23,12 +23,12 @@
 		// e.g. var jQuery = require("jquery")(window);
 		// See ticket #14549 for more info.
 		module.exports = global.document ?
-			factory(global, true) :
-			function(w) {
-				if (!w.document) {
-					throw new Error("jQuery requires a window with a document");
+			factory( global, true ) :
+			function( w ) {
+				if ( !w.document ) {
+					throw new Error( "jQuery requires a window with a document" );
 				}
-				return factory (w);
+				return factory( w );
 			};
 	} else {
 		factory( global );
