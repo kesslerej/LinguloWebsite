@@ -3,10 +3,10 @@
  * @author Lea Verou
  * MIT license
  */
-(function () {
-if(!window.addEventListener) {
-    "use strict";
 
+(function(){
+
+if(!window.addEventListener) {
   return;
 }
 
